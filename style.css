@@ -1,0 +1,286 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6f9fc;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button, input {
+  font-family: inherit;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.logo span {
+  color: #3a86ff;
+}
+.btn-tips {
+  background: #ff6b6b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+.hero h1 {
+  color: #3a86ff;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+.question-box {
+  background: #e3f2ff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+  text-align: left;
+}
+.question-box h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.question-box ul {
+  list-style: none;
+}
+.question-box li {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+.btn-chat {
+  background: #3a86ff;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Chatbot Section */
+.chatbot-section {
+  background: #eef6ff;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.chatbot-section h2 {
+  margin-bottom: 1rem;
+  color: #3a86ff;
+}
+.chatbot-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Newsletter */
+.newsletter {
+  background: #ffe99e;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.newsletter h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #ff7b00;
+}
+.newsletter span {
+  font-size: 0.9rem;
+  color: #777;
+}
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.newsletter input[type="email"] {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 250px;
+}
+.newsletter button {
+  background: #3a86ff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  background: #f0f0f0;
+  color: #555;
+}
+.footer-links {
+  margin-bottom: 0.5rem;
+}
+.footer-links a {
+  margin: 0 0.5rem;
+  color: #555;
+}
+/* Animation Helpers */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mobile-hint {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+.mobile-hint a {
+  color: #3a86ff;
+  font-weight: 500;
+}
+.btn-full-chat {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #3a86ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.btn-full-chat:hover {
+  transform: scale(1.05);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .btn-tips {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .question-box {
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .btn-chat {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .chatbot-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .chatbot-container iframe {
+    min-height: 500px;
+    height: 100%;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .newsletter input {
+    width: 100%;
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+.newsletter iframe {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+}
+.footer-links {
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #3a86ff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #0057d9;
+}
+
+main.content {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.7;
+}
+.newsletter iframe {
+  min-height: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
